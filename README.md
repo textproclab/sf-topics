@@ -12,10 +12,50 @@ evaluated separately. This repository contains the analysis code, annotation
 rubric, and judgments for all 195 topics.
 
 
-## Status of contents
+## Contents
 
-Per-topic judgments and rubric coming by July 4; the full pipeline is being
-cleaned for release within the month.
+Available now:
+
+- [`evaluation/topic_judgments.csv`](evaluation/topic_judgments.csv) –
+  per-topic judgments for all 195 topics across the four model
+  configurations reported in the paper (Tables 2–3).
+- [`evaluation/verify_judgments.py`](evaluation/verify_judgments.py) –
+  verifies the released judgments against the paper's published tables
+  (Tables 2–3).
+
+Coming shortly: the annotation rubric for the coherence and
+thematic-content judgments (paper §3.3).
+
+Being cleaned for release (expected by early August 2026): corpus metadata
+and bin assignments, the stoplist, preprocessing and MALLET configuration,
+the automatic author-concentration computation, and the cross-period
+alignment code (cosine + Hungarian matching with permutation null).
+
+
+### Data dictionary: `topic_judgments.csv`
+
+One row per topic (195 rows). Configurations: `full_k15`, `full_k60`
+(whole-corpus LDA), `binned_mallet`, `binned_authorless` (one k=15 model
+per temporal bin; the Authorless variant downweights author-specific
+vocabulary before fitting).
+
+| Column | Source | Description |
+|---|---|---|
+| `configuration` | – | Model configuration (see above) |
+| `bin` | – | Temporal bin (`pre_1880`, `1880_1899`, `1900_1914`, `1915_1930`) or `full_corpus` |
+| `topic_id` | – | Topic index within its model |
+| `top_10_words` | model output | Top 10 words by topic-word probability |
+| `coherent` | manual annotation | Top words form a recognizable semantic field (Yes/No) |
+| `thematic` | manual annotation | Coherent topic whose semantic field captures subject matter rather than register or paratext (Yes/No; empty for incoherent topics, which received no thematic label) |
+| `concentration` | computed | Fraction of the topic's top-5 highest-loading chunks contributed by its dominant author (0.2–1.0) |
+| `dominant_author` | computed | The author contributing the most top-5 chunks |
+| `notes` | manual annotation | Free-text annotation notes |
+
+Coherence and thematic-content labels were assigned by a single annotator
+(see the paper's Limitations section). `concentration` and
+`dominant_author` are currently populated for the full-corpus
+configurations only; the values for the binned configurations will be
+added with the pipeline release.
 
 
 ## Citation

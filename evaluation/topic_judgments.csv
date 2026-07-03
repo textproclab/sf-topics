@@ -1,0 +1,196 @@
+configuration,bin,topic_id,top_10_words,coherent,thematic,concentration,dominant_author,notes
+full_k15,full_corpus,0,men world people man years life great women work country,Yes,Yes,0.4,"Donnelly, Ignatius",Social/political - clear thematic
+full_k15,full_corpus,1,man eyes face back hand asked looked voice moment turned,Yes,No,0.6,"Davis, Owen",Narration/dialogue - linguistic mode
+full_k15,full_corpus,2,back eyes moment light hand feet head suddenly stood man,Yes,No,0.2,"Hamilton, Edmond",Action narration - linguistic mode
+full_k15,full_corpus,3,good man day time thing night room back house things,No,,0.8,"Wells, H. G.",Generic words - no clear field
+full_k15,full_corpus,4,time made mind fact found make present part case matter,No,,0.4,"Hastings, George Gordon",Generic function words - no clear field
+full_k15,full_corpus,5,life love heart soul death day eyes father thought world,Yes,Yes,1.0,"Shelley, Mary Wollstonecraft",Emotion/psychology - clear thematic
+full_k15,full_corpus,6,men war enemy guns ships battle fleet army time hundred,Yes,Yes,0.8,"Griffith, George Chetwynd",Military/warfare - clear thematic
+full_k15,full_corpus,7,great long made found men trees water ground time back,No,,1.0,"Waterloo, Stanley",Generic + scattered - no clear field
+full_k15,full_corpus,8,engineer replied water sea sailor day time companions made uncle,Yes,No,1.0,"Verne, Jules",Character roles - coherent but not thematic
+full_k15,full_corpus,9,white light great people city gold stood blue eyes high,Yes,Yes,0.4,"Bradshaw, William Richard",Utopia/city - clear thematic
+full_k15,full_corpus,10,book cloth story read author full written illustrated page published,Yes,No,1.0,"Senarens, Luis",Publishing paratext - coherent but not story content
+full_k15,full_corpus,11,ship water boat sea deck cried time vessel cabin made,Yes,Yes,0.8,"Senarens, Luis",Nautical - clear thematic
+full_k15,full_corpus,12,thou thy made great thee surely make thing time heart,Yes,No,1.0,"Hodgson, William Hope",Archaic diction - linguistic mode
+full_k15,full_corpus,13,earth sun miles surface planet water light time world great,Yes,Yes,0.4,"Serviss, Garrett Putman",Planetary - clear thematic
+full_k15,full_corpus,14,air machine car power metal room work light ship gas,Yes,Yes,0.4,"Smith, E. E.",Technology - clear thematic
+full_k60,full_corpus,0,men eyes priest man body white spirit things save woman,No,,1.0,Giesy,Scattered - no clear field
+full_k60,full_corpus,1,man girl lah replied great warriors escape village men people,Yes,Yes,1.0,Burroughs,Adventure/primitive - thematic
+full_k60,full_corpus,2,city people men streets great houses street world women cities,Yes,Yes,0.6,Various,Urban/city - clear thematic
+full_k60,full_corpus,3,back man face body head hand dead feet death eyes,Yes,No,0.4,Burroughs,Body/action narration - linguistic mode
+full_k60,full_corpus,4,war power country present people peace made man law death,Yes,Yes,0.6,Griffith,War/politics - clear thematic
+full_k60,full_corpus,5,back made time side end rope long make men hand,No,,0.8,Hodgson,Generic action - no clear field
+full_k60,full_corpus,6,time asked thing make good back man thought things replied,No,,0.4,Hodgson,Generic dialogue - no clear field
+full_k60,full_corpus,7,uncle lava volcano cried crater volcanic eruption raft sea soil,Yes,Yes,1.0,Verne,Volcanic/geological - clear thematic
+full_k60,full_corpus,8,dead earth day death sun world long life human heart,Yes,Yes,0.8,Shelley,Death/apocalyptic - thematic
+full_k60,full_corpus,9,cloth child extra nett boards woman boy nurse baby idiot,No,,0.8,Duchess,Paratext mixed with domestic - incoherent mix
+full_k60,full_corpus,10,night day sleep morning time hours long found hour days,Yes,Yes,0.8,Janvier,Time/daily rhythm - thematic
+full_k60,full_corpus,11,boat ship water sea deck vessel cabin shore crew board,Yes,Yes,0.4,Verne,Nautical - clear thematic
+full_k60,full_corpus,12,man eyes looked face turned asked smiled back hand head,Yes,No,0.4,Gregory,Narration/dialogue - linguistic mode
+full_k60,full_corpus,13,engineer sailor colonists reporter companions replied answered corral shore convicts,Yes,No,1.0,Verne,Character roles - coherent but not thematic
+full_k60,full_corpus,14,ant earth man set replied rifle plane finally palace bees,No,,1.0,Farley,Scattered - no clear field
+full_k60,full_corpus,15,paper letter read night morning clock office news train papers,Yes,Yes,0.4,Matthews,Modern/urban life - thematic
+full_k60,full_corpus,16,great walls city stone building palace side stood white roof,Yes,Yes,0.2,Cummings,Architecture/palace - clear thematic
+full_k60,full_corpus,17,rock feet cave cliff water wall rocks tunnel cavern found,Yes,Yes,0.4,Burroughs,Underground/caves - clear thematic
+full_k60,full_corpus,18,light darkness sky black dark great red eyes night white,Yes,Yes,0.8,Wells,Light/darkness - thematic
+full_k60,full_corpus,19,padre instinctive source welson affection affectionate children goodness expression impression,No,,1.0,Smile,Idiosyncratic - no general field
+full_k60,full_corpus,20,hair eyes man white face black head blue long red,Yes,Yes,0.2,Cummings,Physical description - thematic
+full_k60,full_corpus,21,men enemy army battle soldiers line attack fight troops war,Yes,Yes,0.6,Forbes,Military/battle - clear thematic
+full_k60,full_corpus,22,life heart death thought hope eyes poor felt mind die,Yes,Yes,1.0,Shelley,Emotion/psychology - clear thematic
+full_k60,full_corpus,23,horse horses king men man rode road ride sword back,Yes,Yes,0.8,Stilson,Medieval/horses - clear thematic
+full_k60,full_corpus,24,great made men forest wild wood tree day knew fire,Yes,Yes,1.0,Waterloo,Primitive/forest - clear thematic
+full_k60,full_corpus,25,beautiful music beauty gold flowers sweet soul golden people art,Yes,Yes,0.8,Bradshaw,Aestheticism - clear thematic
+full_k60,full_corpus,26,doctor made food make water iron fire meat good wood,Yes,Yes,1.0,Verne,Survival/crafting - thematic
+full_k60,full_corpus,27,life man human body world years soul matter brain time,Yes,Yes,1.0,Flammarion,Philosophy/existence - clear thematic
+full_k60,full_corpus,28,eyes moment voice head face looked hand back hands felt,Yes,No,0.4,Benson,Narration - linguistic mode
+full_k60,full_corpus,29,found whilst state doctor appeared appearance present part returned place,No,,0.6,Shelley,Generic/archaic - no clear field
+full_k60,full_corpus,30,room ship men ray deck lights back stood small light,Yes,Yes,0.6,Various,Spaceship interior - thematic
+full_k60,full_corpus,31,men work system century time public general years government great,Yes,Yes,0.8,Bellamy,Social/political - clear thematic
+full_k60,full_corpus,32,good things thing put day bit sort wanted back boy,No,,0.8,Wells,Generic colloquial - no clear field
+full_k60,full_corpus,33,door room house table window floor open opened man back,Yes,No,0.6,Wells,Domestic interior - register/setting
+full_k60,full_corpus,34,book story read author work written magazine page reader poem,Yes,No,0.8,Lovecraft,Magazine paratext - coherent but not story content
+full_k60,full_corpus,35,men world people man great years race life human earth,Yes,Yes,0.4,Hamilton,Future history - thematic
+full_k60,full_corpus,36,ice ship professor boys snow asked big cried water exclaimed,Yes,Yes,1.0,Rockwood,Arctic adventure - thematic
+full_k60,full_corpus,37,illustrated full copies fred instructions complete boy anderson send illustrations,Yes,No,1.0,Senarens,Publishing paratext - coherent but not story content
+full_k60,full_corpus,38,father years young man great day house mother good son,Yes,Yes,0.4,Donnelly,Family/domestic - clear thematic
+full_k60,full_corpus,39,sea fish replied water meters waters surface waves ocean whale,Yes,Yes,1.0,Verne,Marine/ocean - clear thematic
+full_k60,full_corpus,40,man people things presently round black thing machine suddenly flying,No,,1.0,Wells,Generic/scattered - no clear field
+full_k60,full_corpus,41,thou thy thee hath hast priest thine people art great,Yes,No,0.8,Stilson,Archaic diction - linguistic mode
+full_k60,full_corpus,42,men stood hand turned voice back heard side words man,Yes,No,0.6,Cummings,Narration - linguistic mode
+full_k60,full_corpus,43,house road children village women place work country garden farm,Yes,Yes,0.8,Griffith,Rural domestic - clear thematic
+full_k60,full_corpus,44,time made long day return make great place days found,No,,0.8,Forbes,Generic function words - no clear field
+full_k60,full_corpus,45,cried moment yer inventor replied declared dat young yez made,Yes,No,0.8,Senarens,Dialect dialogue - linguistic mode
+full_k60,full_corpus,46,birds creatures bird trees tree water creature wings great long,Yes,Yes,0.8,Leinster,Creatures/nature - clear thematic
+full_k60,full_corpus,47,air work metal power apparatus machine laboratory glass light electric,Yes,Yes,0.2,Smith,Technology/laboratory - clear thematic
+full_k60,full_corpus,48,planet earth sun space distance stars atmosphere projectile moon star,Yes,Yes,0.8,Serviss,Planetary/space - clear thematic
+full_k60,full_corpus,49,fire air wind began storm smoke fell heard moment roar,Yes,Yes,0.4,Serviss,Natural forces - thematic
+full_k60,full_corpus,50,car air speed plane ship machine power miles feet space,Yes,Yes,0.8,Nowlan,Vehicles/technology - clear thematic
+full_k60,full_corpus,51,great surely made thing make presently heart utter set place,No,,1.0,Hodgson,Idiosyncratic (Hodgson) - no general field
+full_k60,full_corpus,52,love woman girl eyes father life heart face mother child,Yes,Yes,0.2,Grant,Love/family - clear thematic
+full_k60,full_corpus,53,ships fleet air guns war ship vessels hundred speed thousand,Yes,Yes,1.0,Griffith,Naval warfare - clear thematic
+full_k60,full_corpus,54,mind fact made found thought world strange question knowledge case,Yes,No,0.4,Smyth,Exposition - linguistic mode
+full_k60,full_corpus,55,replied good man give make word tone doubt call face,No,,1.0,Duchess,Generic dialogue - no clear field
+full_k60,full_corpus,56,money thousand hundred dollars man business pay day gold price,Yes,Yes,0.6,London,Economic - clear thematic
+full_k60,full_corpus,57,miles land mountain sea trees river country north hills mountains,Yes,Yes,0.2,Greg,Landscape/geography - clear thematic
+full_k60,full_corpus,58,water surface miles feet hundred air heat twenty temperature time,Yes,Yes,1.0,Wicks,Scientific measurement - thematic
+full_k60,full_corpus,59,life women nature children art age natural society people education,Yes,Yes,0.6,Abbott,Social/philosophical - thematic
+binned_mallet,1880_1899,0,light eyes stood black man back moment suddenly turned side,Yes,No,,,Dramatic narration - linguistic mode
+binned_mallet,1880_1899,1,man world life eyes words time hand death heart love,Yes,No,,,Poetic/dramatic - linguistic mode
+binned_mallet,1880_1899,2,beauty beautiful gold music art high city love flowers soul,Yes,Yes,,,Aestheticism/utopia - clear thematic
+binned_mallet,1880_1899,3,cloth book extra boards paper read cents author work written,Yes,No,,,Publishing paratext - coherent but not story content
+binned_mallet,1880_1899,4,girl young eyes face woman good love mother people back,Yes,Yes,,,Family/domestic - clear thematic
+binned_mallet,1880_1899,5,cried men back hand made ground moment body time head,Yes,No,,,Action narration - linguistic mode
+binned_mallet,1880_1899,6,boat ship water deck good made time long cabin vessel,Yes,Yes,,,Nautical - clear thematic
+binned_mallet,1880_1899,7,water trees white great sea bird mountain rock day birds,Yes,Yes,,,Natural landscape - clear thematic
+binned_mallet,1880_1899,8,life body man human years light matter science space world,Yes,Yes,,,Science/philosophy - clear thematic
+binned_mallet,1880_1899,9,men people man world years great life work women country,Yes,Yes,,,Social/political - clear thematic
+binned_mallet,1880_1899,10,earth air sun water miles surface hundred great feet planet,Yes,Yes,,,Planetary - clear thematic
+binned_mallet,1880_1899,11,time good thing man made day hundred people make dollars,No,,,,Generic + scattered - no clear field
+binned_mallet,1880_1899,12,man room door looked night house hand table thought asked,Yes,No,,,Domestic scenes/narration - linguistic mode
+binned_mallet,1880_1899,13,ships air war guns men fleet enemy force line ship,Yes,Yes,,,Military/warfare - clear thematic
+binned_mallet,1880_1899,14,time made make fact found great case replied good question,No,,,,Generic function words - no clear field
+binned_mallet,1900_1914,0,illustrated copies book fred full instructions nett complete published anderson,Yes,No,,,Publishing paratext - coherent but not story content
+binned_mallet,1900_1914,1,life world men human years man power great women nature,Yes,Yes,,,Social/philosophical - clear thematic
+binned_mallet,1900_1914,2,ship cried professor asked exclaimed water air boys replied inventor,Yes,Yes,,,Adventure - thematic with dialogue markers
+binned_mallet,1900_1914,3,earth planet miles sun surface water atmosphere large distance time,Yes,Yes,,,Planetary - clear thematic
+binned_mallet,1900_1914,4,time man day made good make matter give replied thought,No,,,,Generic function words - no clear field
+binned_mallet,1900_1914,5,man woman good asked thing room young back girl looked,Yes,Yes,,,Domestic/interpersonal - thematic
+binned_mallet,1900_1914,6,back moment hand head face eyes fell turned suddenly feet,Yes,No,,,Action narration - linguistic mode
+binned_mallet,1900_1914,7,made great surely make thing heart presently set time utter,No,,,,Idiosyncratic (archaic) - no general field
+binned_mallet,1900_1914,8,george beautiful eyes love great people woman white world young,Yes,Yes,,,Romance/beauty - thematic (george is odd)
+binned_mallet,1900_1914,9,war men ships guns enemy fleet battle attack army officer,Yes,Yes,,,Military/warfare - clear thematic
+binned_mallet,1900_1914,10,great made men tree long forest day trees things place,Yes,Yes,,,Nature/primitive - thematic
+binned_mallet,1900_1914,11,ship boat deck sea men sun water light time night,Yes,Yes,,,Nautical - clear thematic
+binned_mallet,1900_1914,12,water feet long sea great sky high found ice mountain,Yes,Yes,,,Natural landscape - clear thematic
+binned_mallet,1900_1914,13,people work men day great country large city hundred class,Yes,Yes,,,Social/political - clear thematic
+binned_mallet,1900_1914,14,room stood looked door back eyes man light turned face,Yes,No,,,Narration/action - linguistic mode
+binned_mallet,1915_1930,0,men stood palace white gold priest king walls side room,Yes,Yes,,,Palace/exotic - clear thematic
+binned_mallet,1915_1930,1,great replied time long man asked escape cave people beneath,Yes,Yes,,,Adventure/escape - thematic
+binned_mallet,1915_1930,2,ship deck boat room men vessel back cabin crew small,Yes,Yes,,,Nautical - clear thematic
+binned_mallet,1915_1930,3,world men people years life man human women day power,Yes,Yes,,,Future history - clear thematic
+binned_mallet,1915_1930,4,man room door back asked night house looked table time,Yes,No,,,Domestic scenes/narration - linguistic mode
+binned_mallet,1915_1930,5,time made mind fact matter found part present great case,No,,,,Generic function words - no clear field
+binned_mallet,1915_1930,6,light water air great sky sea feet sun black white,Yes,Yes,,,Natural/elemental - thematic
+binned_mallet,1915_1930,7,back face man hand head eyes body feet stood men,Yes,No,,,Body/action narration - linguistic mode
+binned_mallet,1915_1930,8,time power space air light machine metal laboratory force rays,Yes,Yes,,,Technology - clear thematic
+binned_mallet,1915_1930,9,man eyes woman face love life father heart thought words,Yes,Yes,,,Love/romance - clear thematic
+binned_mallet,1915_1930,10,men enemy war guns hundred fleet thousand army fight time,Yes,Yes,,,Military/warfare - clear thematic
+binned_mallet,1915_1930,11,story magazine read issue author poem line amended work written,Yes,No,,,Magazine paratext - coherent but not story content
+binned_mallet,1915_1930,12,things good time day thing people years mother thought young,No,,,,Generic words - no clear field
+binned_mallet,1915_1930,13,men man long day found back valley rock sand water,Yes,Yes,,,Landscape/exploration - thematic
+binned_mallet,1915_1930,14,earth green long body creatures strange trees creature animal food,Yes,Yes,,,Alien biology - clear thematic
+binned_mallet,pre_1880,0,sea vessel boat ship shore coast water land wind board,Yes,Yes,,,Nautical - clear thematic
+binned_mallet,pre_1880,1,sea fish meters water surface waters replied long waves ocean,Yes,Yes,,,Marine/ocean - clear thematic
+binned_mallet,pre_1880,2,padre instinctive source welson children expression affectionate affection goodness purity,No,,,,Idiosyncratic (Smile) - no general field
+binned_mallet,pre_1880,3,projectile air water iron feet work made weight hundred days,Yes,Yes,,,Technology/engineering - thematic
+binned_mallet,pre_1880,4,surface feet miles sun light water distance point part lava,Yes,Yes,,,Planetary/geological - thematic
+binned_mallet,pre_1880,5,earth world thy nature heart plague sun air human thou,Yes,No,,,Archaic/poetic diction - linguistic mode
+binned_mallet,pre_1880,6,time great men country people found years world life public,Yes,Yes,,,Social/historical - thematic
+binned_mallet,pre_1880,7,good time young poor wife man house day great children,Yes,Yes,,,Domestic - clear thematic
+binned_mallet,pre_1880,8,eyes hand moment back light time head night fell heard,Yes,No,,,Action narration - linguistic mode
+binned_mallet,pre_1880,9,doctor trees feet ground long birds made country miles hundred,Yes,Yes,,,Nature/exploration - thematic
+binned_mallet,pre_1880,10,half left hand till form women household part answered life,No,,,,Fragmented - no clear field
+binned_mallet,pre_1880,11,replied asked man make made uncle time give good cried,No,,,,Generic dialogue markers - no clear field
+binned_mallet,pre_1880,12,whilst doctor cried till people returned soldiers crowd army duke,Yes,No,,,Mixed action + archaic - linguistic mode (borderline)
+binned_mallet,pre_1880,13,engineer sailor colonists reporter companions replied time corral answered day,Yes,No,,,Character roles - coherent but not thematic content
+binned_mallet,pre_1880,14,love life father heart death felt day mind eyes feelings,Yes,Yes,,,Emotion/psychology - thematic
+binned_authorless,1880_1899,0,life man human world mind body nature time existence power,Yes,Yes,,,Philosophy/existence - clear semantic field
+binned_authorless,1880_1899,1,man hand death eyes back men words voice life hands,Yes,No,,,Dramatic/action narration - linguistic mode
+binned_authorless,1880_1899,2,water sea great mountain land trees lake beneath ice rock,Yes,Yes,,,Natural landscape - clear thematic
+binned_authorless,1880_1899,3,love thou thy thee people life soul heart hath art,Yes,No,,,Archaic/poetic diction - linguistic mode
+binned_authorless,1880_1899,4,book read paper cloth story work written books interest reader,Yes,No,,,Books/publishing - coherent but paratext
+binned_authorless,1880_1899,5,ships men battle war enemy force guns time fire air,Yes,Yes,,,Military/warfare - clear thematic
+binned_authorless,1880_1899,6,earth planet sun air space surface atmosphere light motion globe,Yes,Yes,,,Planets/space - clear thematic
+binned_authorless,1880_1899,7,young girl woman eyes love father face mother life wife,Yes,Yes,,,Family/domestic - clear thematic
+binned_authorless,1880_1899,8,city beautiful white music beauty great gold people stood flowers,Yes,Yes,,,Utopia/aesthetics - clear thematic
+binned_authorless,1880_1899,9,ship air long speed time miles boat deck water feet,Yes,Yes,,,Ships/travel - clear thematic
+binned_authorless,1880_1899,10,time made found make fact place replied case asked day,No,,,,Generic function words - no semantic field
+binned_authorless,1880_1899,11,man good thing room time day made back put make,No,,,,Generic function words - no semantic field
+binned_authorless,1880_1899,12,light night eyes darkness dark felt strange sky black began,Yes,Yes,,,Night/darkness/atmosphere - thematic setting
+binned_authorless,1880_1899,13,men people great world years work day country man women,Yes,Yes,,,Social/historical - clear thematic
+binned_authorless,1880_1899,14,men hand moment stood feet back man side head white,No,,,,Body parts + generic - no clear field
+binned_authorless,1900_1914,0,men great made back head ground long fell found wild,No,,,,Generic + scattered - no clear field
+binned_authorless,1900_1914,1,time world fact made long work years life great planet,Yes,Yes,,,Planetary/cosmological history
+binned_authorless,1900_1914,2,book full boy complete good young books making page anderson,Yes,No,,,Paratext/advertising - coherent but not story content
+binned_authorless,1900_1914,3,men war ships guns enemy battle fire attack time fleet,Yes,Yes,,,Military/warfare - clear thematic
+binned_authorless,1900_1914,4,boat ship sea water deck men wind shore night vessel,Yes,Yes,,,Nautical - clear thematic
+binned_authorless,1900_1914,5,people men great world women country public man power life,Yes,Yes,,,Social/political - clear thematic
+binned_authorless,1900_1914,6,life man world thought love day heart knew long night,Yes,Yes,,,Love/inner life - somewhat diffuse but thematic
+binned_authorless,1900_1914,7,water feet miles sun high earth great long hundred mountain,Yes,Yes,,,Natural world/exploration - thematic
+binned_authorless,1900_1914,8,stood light eyes looked back turned door hand white room,Yes,No,,,Narration/action - linguistic mode
+binned_authorless,1900_1914,9,man asked back looked time good put thing room answered,Yes,No,,,Dialogue/narration - linguistic mode
+binned_authorless,1900_1914,10,day morning house work found left town train years night,Yes,Yes,,,Daily life/realistic - thematic
+binned_authorless,1900_1914,11,cried ship air time replied exclaimed water asked moment machine,Yes,Yes,,,Adventure/exclamation - thematic (borderline)
+binned_authorless,1900_1914,12,great time thing made make place moment strange thought set,No,,,,Generic words - no clear field
+binned_authorless,1900_1914,13,time made day make good give return present leave friend,No,,,,Generic words - no clear field
+binned_authorless,1900_1914,14,young woman people beautiful women eyes great white girl gold,Yes,Yes,,,Women/beauty - thematic
+binned_authorless,1915_1930,0,ship air water plane sea deck boat speed cabin black,Yes,Yes,,,Air/sea ships - clear thematic
+binned_authorless,1915_1930,1,time man replied made make found asked place left knew,No,,,,Generic dialogue markers - no clear field
+binned_authorless,1915_1930,2,room door light stood window floor back voice house dark,Yes,Yes,,,Interior/haunted house - thematic setting
+binned_authorless,1915_1930,3,world men life years people time human things days great,Yes,Yes,,,Future history/civilization - thematic
+binned_authorless,1915_1930,4,white gold men red people blue stood palace side eyes,Yes,Yes,,,Palace/exotic setting - thematic (colors as markers)
+binned_authorless,1915_1930,5,back man eyes face head body hand hands men turned,Yes,No,,,Body/action narration - linguistic mode
+binned_authorless,1915_1930,6,story read work book paper good present interest written large,Yes,No,,,Magazine paratext - coherent but not story content
+binned_authorless,1915_1930,7,man great food creature men creatures village long animal tree,Yes,Yes,,,Primitive/alien world - clear thematic
+binned_authorless,1915_1930,8,time back good day thing things put asked made thought,No,,,,Generic words - no clear field
+binned_authorless,1915_1930,9,man eyes woman face love girl father life hand voice,Yes,Yes,,,Love/romance - clear thematic
+binned_authorless,1915_1930,10,air space power light time machine laboratory metal earth work,Yes,Yes,,,Technology/laboratory - clear thematic
+binned_authorless,1915_1930,11,strange eyes mind thing light thought felt time great life,Yes,Yes,,,Strange experiences/mental - thematic
+binned_authorless,1915_1930,12,feet side back rock time wall end great turned tunnel,Yes,Yes,,,Underground/spelunking - thematic setting
+binned_authorless,1915_1930,13,water night sun long day sky lay wind trees miles,Yes,Yes,,,Outdoor/nature - thematic
+binned_authorless,1915_1930,14,men enemy fight war city battle fighting hundred great thousand,Yes,Yes,,,War/battle - clear thematic
+binned_authorless,pre_1880,0,fish water sea surface long waters animal degrees back ocean,Yes,Yes,,,Marine/nautical - clear thematic
+binned_authorless,pre_1880,1,engineer sailor time companions colonists reporter answered back day shore,Yes,No,,,Character roles - coherent but not thematic content
+binned_authorless,pre_1880,2,sun found trees earth appeared left light day land white,Yes,Yes,,,Natural world - somewhat diffuse but thematic
+binned_authorless,pre_1880,3,replied asked made make man good give time day find,No,,,,Generic dialogue - no clear field
+binned_authorless,pre_1880,4,doctor feet hundred birds long miles ground country trees tree,Yes,Yes,,,Exploration/nature - thematic
+binned_authorless,pre_1880,5,eyes moment hand head light thought heard long cried fell,Yes,No,,,Action narration - linguistic mode
+binned_authorless,pre_1880,6,young good time house wife poor man mother great room,Yes,Yes,,,Domestic - clear thematic
+binned_authorless,pre_1880,7,children affection expression women race direction impression habits effect source,No,,,,Abstract/idiosyncratic - no clear field
+binned_authorless,pre_1880,8,life love heart father mind feelings day felt death thought,Yes,Yes,,,Emotion/psychology - thematic
+binned_authorless,pre_1880,9,thy thou world spirit earth till people war army soul,Yes,No,,,Archaic/poetic diction - linguistic mode
+binned_authorless,pre_1880,10,vessel sea ship boat shore coast wind board land water,Yes,Yes,,,Nautical - clear thematic
+binned_authorless,pre_1880,11,miles feet surface distance point space hundred air atmosphere sun,Yes,Yes,,,Space/measurement - thematic
+binned_authorless,pre_1880,12,made work day time water iron make fire great long,Yes,Yes,,,Labor/crafting - thematic (borderline)
+binned_authorless,pre_1880,13,uncle water feet volcano lava great hundred light sea surface,Yes,Yes,,,Volcanic/geological - thematic
+binned_authorless,pre_1880,14,life great men years time world man people country science,Yes,Yes,,,History/civilization - thematic
