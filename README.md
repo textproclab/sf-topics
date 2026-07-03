@@ -47,7 +47,7 @@ cleaned for release within the month.
 ## License
 
 Code and annotations in this repository are released under the
-[MIT License](LICENSE).
+[MIT License](LICENSE.md).
 
 The underlying texts are public-domain works from Project Gutenberg,
 accessed via the [Sci-Fi-Books-gutenberg](https://huggingface.co/datasets/stevez80/Sci-Fi-Books-gutenberg)
