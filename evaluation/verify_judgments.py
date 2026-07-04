@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """Verify that topic_judgments.csv reconciles with the published paper
-(Tables 2 and 3 of Gordon, 2026; doi:10.18653/v1/2026.nlp4dh-1.21).
+(Tables 2, 3, and 5 of Gordon, 2026; doi:10.18653/v1/2026.nlp4dh-1.21).
 
 Usage:
     python verify_judgments.py [topic_judgments.csv]
@@ -22,12 +22,39 @@ EXPECTED_TOTALS = {
     "binned_authorless": (60, 50, 39),
 }
 
-# Table 2: mean over topics.  Binned values
+# Table 2: mean author concentration over topics.
 EXPECTED_CONCENTRATION = {
-    "full_k15": 0.680,  # are checked only once per-topic values are
-    "full_k60": 0.707,  # released for the binned configurations.
+    "full_k15": 0.680,
+    "full_k60": 0.707,
     "binned_mallet": 0.807,
     "binned_authorless": 0.727,
+}
+
+# Table 5: mean author concentration per temporal bin.
+EXPECTED_CONCENTRATION_PER_BIN = {
+    "binned_mallet": {
+        "pre_1880": 0.920,
+        "1880_1899": 0.867,
+        "1900_1914": 0.827,
+        "1915_1930": 0.613,
+    },
+    "binned_authorless": {
+        "pre_1880": 0.867,
+        "1880_1899": 0.693,
+        "1900_1914": 0.747,
+        "1915_1930": 0.600,
+    },
+}
+
+# Section 4.2: topics whose top-5 chunks all come from one author
+# (concentration == 1.0), and mean unique authors per topic.
+EXPECTED_SINGLE_AUTHOR_TOPICS = {
+    "binned_mallet": 30,
+    "binned_authorless": 23,
+}
+EXPECTED_MEAN_UNIQUE_AUTHORS = {
+    "binned_mallet": 1.80,
+    "binned_authorless": 2.27,
 }
 
 # Table 3: coherent-AND-thematic per bin
@@ -49,6 +76,15 @@ EXPECTED_PER_BIN = {
 TOTAL_TOPICS = 195
 
 
+def check(failures: list[str], label: str, got: object, want: object) -> None:
+    """Compare got to want, print a PASS/FAIL line, and record failures."""
+    if got == want:
+        print(f"PASS {label}: got {got}, expected {want}")
+    else:
+        print(f"FAIL {label}: got {got}, expected {want}")
+        failures.append(label)
+
+
 def main() -> int:
     path = (
         Path(sys.argv[1])
@@ -57,49 +93,102 @@ def main() -> int:
     )
     df = pd.read_csv(path, dtype=str)
     df["concentration"] = pd.to_numeric(df["concentration"], errors="coerce")
+    df["n_unique_authors_top5"] = pd.to_numeric(
+        df["n_unique_authors_top5"], errors="coerce"
+    )
 
-    ok = True
+    failures: list[str] = []
 
-    def report(label, got, want):
-        nonlocal ok
-        match = got == want
-        ok &= match
-        print(
-            f"{'PASS' if match else 'FAIL'} {label}: got {got}, expected {want}"
-        )
-
-    report("total topics", len(df), TOTAL_TOPICS)
-    report(
+    check(failures, "total topics", len(df), TOTAL_TOPICS)
+    check(
+        failures,
         "duplicate (configuration, bin, topic_id) keys",
         int(df.duplicated(["configuration", "bin", "topic_id"]).sum()),
         0,
     )
-    report(
+    check(
+        failures,
         "incoherent rows labeled thematic",
         int(((df["coherent"] == "No") & (df["thematic"] == "Yes")).sum()),
         0,
     )
+    check(
+        failures,
+        "rows missing computed values",
+        int(
+            df[["concentration", "dominant_author", "n_unique_authors_top5"]]
+            .isna()
+            .sum()
+            .sum()
+        ),
+        0,
+    )
+    check(
+        failures,
+        "concentration/unique-author consistency (1.0 <=> one author)",
+        int(
+            (
+                (df["concentration"] == 1.0)
+                != (df["n_unique_authors_top5"] == 1)
+            ).sum()
+        ),
+        0,
+    )
 
-    for config, (n, coh, them) in EXPECTED_TOTALS.items():
+    for config, (n_topics, coherent, thematic) in EXPECTED_TOTALS.items():
         sub = df[df["configuration"] == config]
-        report(f"{config}: n topics", len(sub), n)
-        report(
-            f"{config}: coherent", int((sub["coherent"] == "Yes").sum()), coh
+        check(failures, f"{config}: n topics", len(sub), n_topics)
+        check(
+            failures,
+            f"{config}: coherent",
+            int((sub["coherent"] == "Yes").sum()),
+            coherent,
         )
-        report(
-            f"{config}: thematic", int((sub["thematic"] == "Yes").sum()), them
+        check(
+            failures,
+            f"{config}: thematic",
+            int((sub["thematic"] == "Yes").sum()),
+            thematic,
         )
 
     for config, want in EXPECTED_CONCENTRATION.items():
         sub = df[df["configuration"] == config]
-        if sub["concentration"].notna().all():
-            got = round(float(sub["concentration"].mean()), 3)
-            report(f"{config}: mean concentration", got, want)
-        else:
-            print(
-                f"SKIP  {config}: mean concentration "
-                f"({int(sub['concentration'].isna().sum())} rows without values)"
+        got = round(float(sub["concentration"].mean()), 3)
+        check(failures, f"{config}: mean concentration", got, want)
+
+    for config, per_bin in EXPECTED_CONCENTRATION_PER_BIN.items():
+        sub = df[df["configuration"] == config]
+        for bin_name, want in per_bin.items():
+            got = round(
+                float(
+                    sub.loc[sub["bin"] == bin_name, "concentration"].mean()
+                ),
+                3,
             )
+            check(
+                failures,
+                f"{config} / {bin_name}: mean concentration",
+                got,
+                want,
+            )
+
+    for config, want in EXPECTED_SINGLE_AUTHOR_TOPICS.items():
+        sub = df[df["configuration"] == config]
+        check(
+            failures,
+            f"{config}: single-author topics",
+            int((sub["concentration"] == 1.0).sum()),
+            want,
+        )
+
+    for config, want in EXPECTED_MEAN_UNIQUE_AUTHORS.items():
+        sub = df[df["configuration"] == config]
+        check(
+            failures,
+            f"{config}: mean unique authors per topic",
+            round(float(sub["n_unique_authors_top5"].mean()), 2),
+            want,
+        )
 
     for config, per_bin in EXPECTED_PER_BIN.items():
         sub = df[df["configuration"] == config]
@@ -111,11 +200,19 @@ def main() -> int:
                     & (sub["thematic"] == "Yes")
                 ).sum()
             )
-            report(f"{config} / {bin_name}: coherent-and-thematic", got, want)
+            check(
+                failures,
+                f"{config} / {bin_name}: coherent-and-thematic",
+                got,
+                want,
+            )
 
     print()
-    print("All checks passed." if ok else "One or more checks FAILED.")
-    return 0 if ok else 1
+    if failures:
+        print(f"{len(failures)} check(s) FAILED.")
+        return 1
+    print("All checks passed.")
+    return 0
 
 
 if __name__ == "__main__":

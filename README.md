@@ -4,12 +4,12 @@ Code and data for [Gordon
 (2026)](https://doi.org/10.18653/v1/2026.nlp4dh-1.21).
 
 We trace thematic change across 238 public-domain science fiction texts
-(1818–1930) using temporally binned LDA, identifying four high-continuity
-thematic chains and a broad turn from romantic toward technoscientific
-forms. Methodologically: binning buys diachrony, Authorless preprocessing
-buys cross-author representativeness – and the two effects should be
-evaluated separately. This repository contains the analysis code, annotation
-rubric, and judgments for all 195 topics.
+(1818–1930) using temporally binned LDA, identifying four
+high-continuity thematic chains and a broad turn from romantic toward
+technoscientific forms. Methodologically: binning buys diachrony,
+Authorless preprocessing buys cross-author representativeness – and the
+two effects should be evaluated separately. This repository contains the
+analysis code, annotation rubric, and judgments for all 195 topics.
 
 
 ## Contents
@@ -18,18 +18,35 @@ Available now:
 
 - [`evaluation/topic_judgments.csv`](evaluation/topic_judgments.csv) –
   per-topic judgments for all 195 topics across the four model
-  configurations reported in the paper (Tables 2–3).
+  configurations reported in the paper (Tables 2–3), with author
+  concentration and dominant author for every topic (Tables 2 and 5).
 - [`evaluation/verify_judgments.py`](evaluation/verify_judgments.py) –
   verifies the released judgments against the paper's published tables
-  (Tables 2–3).
+  (Tables 2, 3, and 5).
 
 Coming shortly: the annotation rubric for the coherence and
 thematic-content judgments (paper §3.3).
 
-Being cleaned for release (expected by early August 2026): corpus metadata
-and bin assignments, the stoplist, preprocessing and MALLET configuration,
-the automatic author-concentration computation, and the cross-period
-alignment code (cosine + Hungarian matching with permutation null).
+Being cleaned for release (expected by early August 2026): corpus
+metadata and bin assignments, the stoplist, preprocessing and MALLET
+configuration, the author-concentration computation and its per-topic
+top-documents inputs, and the cross-period alignment code (cosine +
+Hungarian matching with permutation null).
+
+
+## Verifying the release
+
+```
+cd evaluation
+pip install -r requirements.txt
+python verify_judgments.py topic_judgments.csv
+```
+
+Every table-level statistic in the paper that can be derived from these
+files is checked: topic counts, coherence and thematic-content shares
+(Tables 2–3), and mean author concentration overall and per bin
+(Tables 2 and 5), along with the single-author topic counts and mean
+unique authors per topic reported in §4.2.
 
 
 ### Data dictionary: `topic_judgments.csv`
@@ -49,13 +66,20 @@ vocabulary before fitting).
 | `thematic` | manual annotation | Coherent topic whose semantic field captures subject matter rather than register or paratext (Yes/No; empty for incoherent topics, which received no thematic label) |
 | `concentration` | computed | Fraction of the topic's top-5 highest-loading chunks contributed by its dominant author (0.2–1.0) |
 | `dominant_author` | computed | The author contributing the most top-5 chunks |
+| `n_unique_authors_top5` | computed | Number of distinct authors among the top-5 chunks |
 | `notes` | manual annotation | Free-text annotation notes |
 
 Coherence and thematic-content labels were assigned by a single annotator
-(see the paper's Limitations section). `concentration` and
-`dominant_author` are currently populated for the full-corpus
-configurations only; the values for the binned configurations will be
-added with the pipeline release.
+(see the paper's Limitations section).
+
+**Provenance of the computed columns.** For each topic, the top-5 chunks
+are the five 1,000-word chunks with the highest topic proportion in the
+model's document–topic distribution. The dominant author is the author
+contributing the most of those five chunks. If two authors tie, the
+author of the highest-ranked chunk among those tied is reported.
+(Concentration is unaffected by this choice.) Author names are given
+verbatim as they appear in the corpus metadata, e.g., `Wells, H. G.
+(Herbert George)`.
 
 
 ## Citation
