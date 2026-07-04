@@ -53,7 +53,7 @@ def main() -> int:
     path = (
         Path(sys.argv[1])
         if len(sys.argv) > 1
-        else Path("topic_judgments.csv")
+        else Path(__file__).parent / "topic_judgments.csv"
     )
     df = pd.read_csv(path, dtype=str)
     df["concentration"] = pd.to_numeric(df["concentration"], errors="coerce")
